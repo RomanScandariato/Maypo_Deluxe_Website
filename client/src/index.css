@@ -1,0 +1,27 @@
+html, body, #root {
+  height: 100%;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: #eee;
+}
+
+nav a.active:not(.navbar-brand), 
+nav a:hover:not(.navbar-brand) {
+  text-decoration: underline;
+}
+
+.landing-hero-image {
+  background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(0, 0, 0, 0.5)), url();
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
