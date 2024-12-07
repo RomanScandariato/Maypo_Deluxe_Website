@@ -3,18 +3,20 @@ import { NavLink } from 'react-router-dom';
 // import { client } from '../main';
 
 function Header() {
+  const textStyle = { color: 'white' };
+
   return (
-    <Container>
-      <Navbar style={{ paddingTop: '18px', paddingBottom: '18px' }}>
+    <Container className="navbar-style">
+      <Navbar className="text-white" style={{ ...textStyle }}>
         <Container className="nav-wrap">
-          <Navbar.Brand as={NavLink} to="/">Maypo Deluxe</Navbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+          <Navbar.Brand as={NavLink} to="/" style={textStyle}>Maypo Deluxe</Navbar.Brand>
+          <Nav className="ms-auto text-white">
+            <Nav.Link as={NavLink} to="/" style={textStyle}>Home</Nav.Link>
               <>
-                <Nav.Link as={NavLink} to="/songs">Songs</Nav.Link>
-                <Nav.Link as={NavLink} to="/video">Video</Nav.Link>
-                <Nav.Link as={NavLink} to="/socials">Social Media</Nav.Link>
-                <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
+                <Nav.Link as={NavLink} to="/songs" style={textStyle}>Songs</Nav.Link>
+                <Nav.Link as={NavLink} to="/video" style={textStyle}>Video</Nav.Link>
+                <Nav.Link as={NavLink} to="/socials" style={textStyle}>Social Media</Nav.Link>
+                <Nav.Link as={NavLink} to="/contact" style={textStyle}>Contact</Nav.Link>
               </>
           </Nav>
         </Container>
