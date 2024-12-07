@@ -18,7 +18,7 @@ nav a:hover:not(.navbar-brand) {
 }
 
 .landing-hero-image {
-  background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(0, 0, 0, 0.5)), url();
+  background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(0, 0, 0, 0.5)), url(/images/Maypo-Deluxe-promo-nobar.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

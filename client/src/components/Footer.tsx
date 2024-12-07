@@ -32,7 +32,7 @@ function Footer() {
           </a>
         </div>
         <p className="mb-0">
-          Dev & Design by Roman Scandariato, Matt Oshea, Matt Morgan, Razieh Zarrabi
+          Dev & Design by Roman Scandariato
         </p>
       </Container>
     </footer>

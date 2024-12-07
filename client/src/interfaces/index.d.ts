@@ -1,14 +1,14 @@
 
-export interface Workout {
-    _id: string;
+// export interface Workout {
+//     _id: string;
 
-    name: string;
+//     name: string;
   
-    muscle: string;
+//     muscle: string;
   
-    difficulty: string;
+//     difficulty: string;
   
-    instructions: string;
+//     instructions: string;
   
-  }
+//   }
   
