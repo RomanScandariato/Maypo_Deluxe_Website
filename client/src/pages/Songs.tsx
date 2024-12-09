@@ -33,7 +33,7 @@ function Songs() {
             <p>Album: Home Coming</p>
             <img src="images/free.png" className="img-fluid mb-3 w-50" />
             <p>
-              <a href="https://open.spotify.com/track/4uTe4L4cZcU5C2mkFmfpSu" target="_blank" rel="noopener noreferrer">
+              <a href="https://open.spotify.com/track/6rcLEBdRwkRgkT4JMIBC4b" target="_blank" rel="noopener noreferrer">
                 Listen on Spotify
               </a>
             </p>
@@ -50,7 +50,7 @@ function Songs() {
             <p>Album: Home Coming</p>
             <img src="images/long_way.png" className="img-fluid mb-3 w-50" />
             <p>
-              <a href="https://open.spotify.com/track/4uTe4L4cZcU5C2mkFmfpSu" target="_blank" rel="noopener noreferrer">
+              <a href="https://open.spotify.com/album/6JGUElqoSWFSigsVK4Qa2x" target="_blank" rel="noopener noreferrer">
                 Listen on Spotify
               </a>
             </p>
