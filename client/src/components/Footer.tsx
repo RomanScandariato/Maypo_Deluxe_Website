@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,7 @@ function Footer() {
           </Col>
           <Col xs="auto" className="d-flex align-items-center">
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/maypodeluxe/"
               target="_blank"
               rel="noopener noreferrer"
               className="me-3 text-dark"
@@ -34,10 +34,19 @@ function Footer() {
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark"
+              className="me-3 text-dark"
               aria-label="Facebook"
             >
               <FontAwesomeIcon icon={faFacebook} size="lg" />
+            </a>
+            <a
+              href="https://open.spotify.com/artist/3QKzy5QsFJh68sQdD7lm0c"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark"
+              aria-label="Spotify"
+            >
+              <FontAwesomeIcon icon={faSpotify} size="lg" />
             </a>
           </Col>
           <Col xs="auto">
