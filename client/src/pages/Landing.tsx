@@ -9,6 +9,8 @@ function Landing() {
   const bioRef = useRef(null);
   const paragraphRefs = useRef<(HTMLParagraphElement | null)[]>([]);
   const mailingListRef = useRef(null);
+  const videoSectionRef = useRef(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,6 +38,16 @@ function Landing() {
       observer.observe(mailingListRef.current);
     }
 
+    if (videoSectionRef.current) {
+      observer.observe(videoSectionRef.current);
+    }
+
+    videoRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
     return () => {
       if (bioRef.current) {
         observer.unobserve(bioRef.current);
@@ -48,6 +60,14 @@ function Landing() {
       if (mailingListRef.current) {
         observer.unobserve(mailingListRef.current);
       }
+      if (videoSectionRef.current) {
+        observer.unobserve(videoSectionRef.current);
+      }
+      videoRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
     };
   }, []);
 
@@ -84,6 +104,29 @@ function Landing() {
         <Col md="4" className="d-flex align-items-center justify-content-center">
           <img src="/images/crowd_landing_picture.png" alt="Bio Image" className="img-fluid img-padding-right" />
         </Col>
+      </Row>
+      <Row className="mt-5 fade-in" ref={videoSectionRef}>
+        <Col>
+          <div className="d-flex flex-column bio-padding">
+            <h1 className="text-center mt-5">Recent Video Clips</h1>
+          </div>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+      <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[0] = el)}>
+          <video width="65%" controls>
+        <source src="/videos/If-I-Only-Knew-RELEASE.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+          </video>
+        </Col>
+        <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[1] = el)}>
+          <video width="65%" controls>
+        <source src="/videos/Around-You-2024.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+          </video>
+        </Col>
+        <div className="mt-5">
+        </div>
       </Row>
       <Row className="mt-5 fade-in" ref={mailingListRef}>
         <Col xs="12">

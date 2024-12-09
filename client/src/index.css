@@ -10,6 +10,14 @@ html, body, #root {
   src: url('../images/fonts/LeagueSpartan.ttf');
 }
 
+.dropdown-menu.show {
+  max-width: 70px !important;
+}
+
+.dropdown-menu[data-bs-popper] .dropdown-item-text {
+  word-wrap: break-word !important;
+}
+
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -260,4 +268,14 @@ html, body, #root {
 
 .footer-logo {
   max-width: 25px;
+}
+
+@media (max-width: 490px) {
+  .nav-wrap {
+    flex-direction: column !important;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+  }
 }
