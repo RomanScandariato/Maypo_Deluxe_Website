@@ -270,6 +270,30 @@ html, body, #root {
   max-width: 25px;
 }
 
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.social-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.styled-paragraph {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.social-image {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  margin-left: 150px !important;
+}
+
 @media (max-width: 490px) {
   .nav-wrap {
     flex-direction: column !important;

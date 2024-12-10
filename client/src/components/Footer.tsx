@@ -31,7 +31,7 @@ function Footer() {
               <FontAwesomeIcon icon={faInstagram} size="lg" />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/maypodeluxe"
               target="_blank"
               rel="noopener noreferrer"
               className="me-3 text-dark"
