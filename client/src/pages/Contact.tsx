@@ -13,7 +13,7 @@ function Contact() {
     setResult(<span style={{ color: 'black' }}>Sending....</span>);
 
     const formData = new FormData(event.target as HTMLFormElement);
-    formData.append("access_key", "32f5e2a0-dee2-4f04-a30c-5da9806bc5ef");
+    formData.append("access_key", "23a09ef5-0246-4a2a-9979-414e6e60c35a");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",

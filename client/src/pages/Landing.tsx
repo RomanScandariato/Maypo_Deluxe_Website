@@ -1,27 +1,30 @@
 import { useEffect, useRef } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import emailjs from 'emailjs-com';
-
-const formRef = useRef<HTMLFormElement>(null);
-
-const sendEmail = (e: React.FormEvent) => {
-  e.preventDefault();
-
-  if (formRef.current) {
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_USER_ID')
-      .then((result) => {
-        console.log(result.text);
-        alert('Subscription successful!');
-      }, (error) => {
-        console.log(error.text);
-        alert('Subscription failed. Please try again.');
-      });
-  }
-};
 
 function Landing() {
   const handleButtonClick = () => {
     window.open('https://open.spotify.com/track/4uTe4L4cZcU5C2mkFmfpSu', '_blank');
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const form = formRef.current;
+    if (form) {
+      const formData = new FormData(form);
+      const response = await fetch('https://formspree.io/f/xrbgvday', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      if (response.ok) {
+        alert('Subscription successful!');
+        form.reset();
+      } else {
+        alert('Subscription failed. Please try again.');
+      }
+    }
   };
 
   const bioRef = useRef(null);
@@ -29,6 +32,7 @@ function Landing() {
   const mailingListRef = useRef(null);
   const videoSectionRef = useRef(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -150,12 +154,12 @@ function Landing() {
         <Col xs="12">
           <h1 className="text-center newsletter-header">Mailing List</h1>
           <p className="text-center newsletter-extra">Subscribe for upcoming events, shows, releases, and more!</p>
-          <Form ref={formRef} className="newsletter-form" onSubmit={sendEmail}>
+          <Form ref={formRef} onSubmit={handleSubmit} className="newsletter-form">
             <Form.Group controlId="formEmail">
-              <Form.Control type="email" name="user_email" placeholder="Enter your email" required />
+              <Form.Control type="email" name="email" placeholder="Enter your email" required />
             </Form.Group>
             <Form.Group controlId="formLocation">
-              <Form.Control type="text" name="user_location" placeholder="Enter your location" required />
+              <Form.Control type="text" name="location" placeholder="Enter your location" required />
             </Form.Group>
             <Button type="submit">Subscribe</Button>
           </Form>
