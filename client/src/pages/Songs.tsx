@@ -24,7 +24,6 @@ function Songs() {
                 <p>Given the shorter length of most mainstream tracks, it’s always an impressive pleasure when a true master of the craft returns to embrace listeners with a purposeful, intentional groove, story, and level of substance. In my view, If I Only Knew delivers precisely the warmth and escapism expected from that fine balancing of qualities.</p>
                 <p>Article by Rebecca Cullen</p>
               </details>
-            <p>Song Player goes here</p>
           </ListGroup.Item>
           </Col>
           <Col xs={12} md={4} className="mb-4">
@@ -41,7 +40,6 @@ function Songs() {
             <summary>Article</summary>
                 <p>No Article Yet</p>
               </details>
-            <p>Song Player goes here</p>
           </ListGroup.Item>
           </Col>
           <Col xs={12} md={4} className="mb-4">
@@ -58,7 +56,6 @@ function Songs() {
             <summary>Article</summary>
                 <p>No Article Yet</p>
               </details>
-            <p>Song Player goes here</p>
           </ListGroup.Item>
           </Col>
         </Row>

@@ -64,6 +64,21 @@ html, body, #root {
   object-fit: cover;
 }
 
+.video-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.landing-text-container {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-button {
+  position: relative;
+  z-index: 3;
+}
+
 .landing-hero-image {
   background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(0, 0, 0, 0.5)), url(/images/Maypo-Deluxe-promo-nobar.png);
   background-size: cover;
@@ -274,6 +289,7 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .social-items {
@@ -294,6 +310,29 @@ html, body, #root {
   margin-left: 150px !important;
 }
 
+@media (max-width: 768px) {
+  .social-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-item {
+    margin-bottom: 20px;
+  }
+
+  .styled-paragraph {
+    font-size: 1.2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .social-image {
+    margin-left: 0 !important;
+    margin-top: 20px;
+    width: 80%;
+  }
+}
+
 @media (max-width: 490px) {
   .nav-wrap {
     flex-direction: column !important;
@@ -301,5 +340,13 @@ html, body, #root {
 
   .navbar-nav.ms-auto {
     margin-left: 0 !important;
+  }
+
+  .styled-paragraph {
+    font-size: 1rem;
+  }
+
+  .social-image {
+    width: 100%; 
   }
 }

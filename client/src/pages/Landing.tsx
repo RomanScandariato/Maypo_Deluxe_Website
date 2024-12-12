@@ -1,5 +1,23 @@
 import { useEffect, useRef } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
+
+const formRef = useRef<HTMLFormElement>(null);
+
+const sendEmail = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (formRef.current) {
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_USER_ID')
+      .then((result) => {
+        console.log(result.text);
+        alert('Subscription successful!');
+      }, (error) => {
+        console.log(error.text);
+        alert('Subscription failed. Please try again.');
+      });
+  }
+};
 
 function Landing() {
   const handleButtonClick = () => {
@@ -74,15 +92,15 @@ function Landing() {
   return (
     <Container fluid={true}>
       <Row>
-      <Col xs="12" className="p-0">
-        <div className="video-wrapper">
-          <video className="landing-hero-video" autoPlay loop muted>
-            <source src="/videos/MD-Movie-Background-2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <Col xs="12" className="p-0">
+          <div className="video-wrapper">
+            <video className="landing-hero-video" autoPlay loop muted>
+              <source src="/videos/MD-Movie-Background-2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </Col>
-        <Col xs="12">
+        <Col xs="12" className="landing-text-container">
           <h1 className="text-center landing-text">Maypo Deluxe</h1>
           <h3 className="text-center landing-text-two">Check Out my Latest Release!</h3>
           <div className="d-flex justify-content-center">
@@ -113,16 +131,16 @@ function Landing() {
         </Col>
       </Row>
       <Row className="mt-5">
-      <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[0] = el)}>
+        <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[0] = el)}>
           <video width="65%" controls>
-        <source src="/videos/If-I-Only-Knew-RELEASE.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+            <source src="/videos/If-I-Only-Knew-RELEASE.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
         </Col>
         <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[1] = el)}>
           <video width="65%" controls>
-        <source src="/videos/Around-You-2024.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+            <source src="/videos/Around-You-2024.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
         </Col>
         <div className="mt-5">
@@ -131,13 +149,13 @@ function Landing() {
       <Row className="mt-5 fade-in" ref={mailingListRef}>
         <Col xs="12">
           <h1 className="text-center newsletter-header">Mailing List</h1>
-          <p className="text-cetner newsletter-extra">Subscribe for upcoming events, shows, releases, and more! </p>
-          <Form className="newsletter-form">
+          <p className="text-center newsletter-extra">Subscribe for upcoming events, shows, releases, and more!</p>
+          <Form ref={formRef} className="newsletter-form" onSubmit={sendEmail}>
             <Form.Group controlId="formEmail">
-              <Form.Control type="email" placeholder="Enter your email" />
+              <Form.Control type="email" name="user_email" placeholder="Enter your email" required />
             </Form.Group>
             <Form.Group controlId="formLocation">
-              <Form.Control type="text" placeholder="Enter your location" />
+              <Form.Control type="text" name="user_location" placeholder="Enter your location" required />
             </Form.Group>
             <Button type="submit">Subscribe</Button>
           </Form>
