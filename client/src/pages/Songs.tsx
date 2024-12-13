@@ -58,6 +58,63 @@ function Songs() {
               </details>
           </ListGroup.Item>
           </Col>
+          <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>You're Nowhere</h4>
+            <p>Album: Weedzie</p>
+            <img src="images/Weedzie.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/track/4SgNQuupy1MXndrVzwqOOk" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>Following the beautifully intoxicating introduction that was Waiting, Maypo Deluxe strikes with a another hit of beautifully intimate song-writing – and a hook section that explodes into life.</p>
+                <p>Leading with a kind of soft-rock swagger through the mellow energy then rising anticipation of its verses, You’re Nowhere quickly progresses into indie rock anthem territory once the chorus drops in. Here the soundscape brightens, the vocal reaches new passionate realms, and the simplicity of the line embraces listeners in an immediately welcoming, soon addictive manner.</p>
+                <p>The whole thing feels like a nineties rock hit ready and waiting to be rediscovered – Ocean Colour Scene, The Stone Roses, Goo Goo Dolls; the warmth and emotion, the organic and crisp set-up.</p>
+                <p>It’s a fresh step away from Waiting, but it still fits the style, offers a powerful midde-8 and guitar solo, and lights up a new side to the artist’s creative arena. Well worth a listen at volume.</p>
+                <p>By Rebecca Cullen</p>
+              </details>
+          </ListGroup.Item>
+          </Col>
+          <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Around You</h4>
+            <p>Album: Weedzie</p>
+            <img src="images/Weedzie.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/album/6L6kAxZjshV1d1vanQCntF" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>No Article Yet</p>
+              </details>
+          </ListGroup.Item>
+          </Col>
+          <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Lonely Road</h4>
+            <p>Album: Going Steady</p>
+            <img src="images/lonely_road.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/album/3qYikl5lX3IA96hA7t3hD6" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>Soul-rock seduction at its finest, heartfelt and briefly melancholic for that classic blues thread, but with a crisp, contemporary finish – allowing this accessible, light and expressive vocal-lead to hit with clear identity and emotion.</p>
+                <p>Backed by the simple swagger of an electric guitar, bass and mellow drum arrangement, Lonely Road is the latest single from an ever-engaging Maypo Deluxe – proving once again that this is one of the most consistently effective corners of indie songwriting.</p>
+                <p>Beautifully captured, there’s a familiarity to the set-up of Lonely Road, but a freshness to the clear passion and delicacy and even grit of the vocal performance. There’s also an element of originality interwoven amidst the recognisable poetic references of the lyrics – this dark lonely road is nothing new, but the details of the longing, the admiration, the optimism, all brings something authentic and honest to the stage.</p>
+                <p>Promising more than a few moments of sultry, alluring guitar solo-work, and that ongoing blues-rock rhythm that just grips the listener and sways them from start to finish, Lonely Road comes in at a fairly extensive four-thirty-six, and proceeds through various stages of sadness towards satisfaction and overcoming.</p>
+                <p>No spoiler necessary, but this one leaves you feeling a sense of possibility and gratitude. It’s a refreshing twist on the traditional blues sentiment, and a pleasure to listen to at volume.</p>
+                <p>By Rebecca Cullen</p>
+              </details>
+          </ListGroup.Item>
+          </Col>
         </Row>
       </ListGroup>
     </Container>
