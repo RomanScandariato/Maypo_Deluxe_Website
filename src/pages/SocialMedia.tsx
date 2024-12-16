@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faSpotify, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faSpotify, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function Socials() {
   return (
@@ -42,6 +42,18 @@ function Socials() {
               <FontAwesomeIcon icon={faTiktok} size="lg" style={{ fontSize: '90px', color: '#24F3EE' }} />
             </a>
             <p className="styled-paragraph">Maypo Doing Acoustic Covers and Originals</p>
+          </div>
+          <div className="social-item d-flex align-items-center mb-5">
+            <a
+              href="https://www.youtube.com/@maypodeluxe5463"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="me-3"
+              aria-label="Youtube"
+            >
+              <FontAwesomeIcon icon={faYoutube} size="lg" style={{ fontSize: '75px', color: '#FF0032' }} />
+            </a>
+            <p className="styled-paragraph">Music Video Clips of Recently Released Songs</p>
           </div>
         </div>
         <img src="images/socials_img.png" alt="cool image of Maypo" className="social-image ms-4" />
