@@ -311,6 +311,10 @@ html, body, #root {
 }
 
 @media (max-width: 768px) {
+  .landing-text {
+    font-size: 6rem;
+  }
+
   .social-container {
     flex-direction: column;
     align-items: center;
