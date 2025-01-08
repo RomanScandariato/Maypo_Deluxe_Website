@@ -90,8 +90,12 @@ function Songs() {
             </p>
             <details className="flex-fill" style={{ marginBottom: '10px' }}>
             <summary>Article</summary>
-                <p>No Article Yet</p>
-              </details>
+                <p>What a tune. Maypo Deluxe ups the ante with this release, delivering a beautifully nostalgic indie-pop and rock fusion of pure positivity and gratitude.</p>
+                <p>Around You sees us move away from the shoulder-swaying grooves of the past, for an upbeat indie gem of a track; one that feels like a slept-on classic from the late nineties days of Girl From Mars and Drinking in LA.</p>
+                <p>Fast-paced and light yet uplifting from the outset, the fullness of this pop-rock and mild-punk set-up is quick to lift the mood of the room. The chord pattern depicts a sense of appreciation and warmth, and the lyrics follow suit accordingly – offering a song that openly celebrates the unrivalled appeal and connection found when spending time with someone who truly lights up your day.</p>
+                <p>Production-wise, Maypo Deluxe has done a fine job with reflecting the positivity and excitement of the lyrics in the pace and detail of the design. The leading voice is humble yet genuinely impassioned, and is backed by quietly harmonised vocals that whisper further warmth into the mix. All of this is reminiscent of an old school style in many ways, but the clarity of the final arrangement, the simple and satisfying resolve of the hook, all works well to build its own sense of identity – and to hand over an indisputable earworm in the process.</p>
+                <p>Celebrate the time spent with people who make the world seem beautiful. Around You is a superb indie track to fire up the new year, and makes for a fine introduction to the ever-impressive and enjoyable catalogue of original music that is the Maypo Deluxe discography.</p>
+            </details>
           </ListGroup.Item>
           </Col>
           <Col xs={12} md={4} className="mb-4">

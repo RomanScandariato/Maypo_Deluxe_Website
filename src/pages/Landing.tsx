@@ -105,7 +105,7 @@ function Landing() {
           </div>
         </Col>
         <Col xs="12" className="landing-text-container">
-          <h1 className="text-center landing-text">Maypo Deluxe 2</h1>
+          <h1 className="text-center landing-text">Maypo Deluxe</h1>
           <h3 className="text-center landing-text-two">Check Out Our Latest Release!</h3>
           <div className="d-flex justify-content-center">
             <button onClick={handleButtonClick} className="btn custom-button initial-load mt-3">Latest Release</button>
