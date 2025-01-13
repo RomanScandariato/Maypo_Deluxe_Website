@@ -277,6 +277,23 @@ html, body, #root {
   text-decoration: underline;
 }
 
+.photo-item {
+  border-radius: 14px !important;
+}
+
+.photo-item p {
+   padding-top: 5px !important;
+   margin-bottom: -5px !important;
+}
+
+.photo-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding-top: 7px;
+}
+
+
 .footer-text {
   color: black !important;
 }
