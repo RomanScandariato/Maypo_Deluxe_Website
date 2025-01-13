@@ -14,6 +14,7 @@ function Header() {
             <Nav.Link as={NavLink} to="/" style={textStyle}>Home</Nav.Link>
               <>
                 <Nav.Link as={NavLink} to="/songs" style={textStyle}>Songs</Nav.Link>
+                <Nav.Link as={NavLink} to="/photos" style={textStyle}>Photos</Nav.Link>
                 <Nav.Link as={NavLink} to="/socials" style={textStyle}>Social Media</Nav.Link>
                 <Nav.Link as={NavLink} to="/contact" style={textStyle}>Contact</Nav.Link>
               </>
