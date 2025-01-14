@@ -43,6 +43,24 @@ function Photos() {
                 <p>The Band</p>
             </ListGroup.Item>
           </Col>                              
+          <Col xs={12} md={4} className="mb-4">
+            <ListGroup.Item className="photo-item">      
+                <img src="images/socials_img.png" className="photo-image" />
+                <p>Mark Scan</p>
+            </ListGroup.Item>
+          </Col>                              
+          <Col xs={12} md={4} className="mb-4">
+            <ListGroup.Item className="photo-item">      
+                <img src="images/tele.jpg" className="photo-image" />
+                <p>Telecaster</p>
+            </ListGroup.Item>
+          </Col>                              
+          <Col xs={12} md={4} className="mb-4">
+            <ListGroup.Item className="photo-item">      
+                <img src="images/stone_pony_teles.jpg" className="photo-image" />
+                <p>Pre Show - The Stone Pony</p>
+            </ListGroup.Item>
+          </Col>                              
         </Row>
       </ListGroup>      
     </Container>
