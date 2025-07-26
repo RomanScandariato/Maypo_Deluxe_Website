@@ -6,6 +6,8 @@ import Songs from './pages/Songs';
 import Photos from './pages/Photos';
 import Socials from './pages/SocialMedia';
 import Contact from './pages/Contact';
+import Player from './pages/Player';
+
 // import ProtectRoute from './components/ProtectRoute';
 
 
@@ -27,6 +29,7 @@ function App() {
           <Route path="/photos" element={<Photos />} />
           <Route path="/socials" element={<Socials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/player" element={<Player />} />
         </Routes>
       </main>
 
