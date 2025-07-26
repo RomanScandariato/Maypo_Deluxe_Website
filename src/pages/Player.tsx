@@ -136,8 +136,10 @@ function Player() {
       <div
         className="top-right-btns"
         style={{
-          position: 'fixed',
-          top: 50,
+          position: 'absolute',
+          width: 150,
+          paddingRight: 10,
+          top: 52,
           right: 0,
           zIndex: 20,
           display: 'flex',
@@ -262,8 +264,7 @@ function Player() {
       </div>
       <div className="play-btn-top-left"
          style={{
-          position: 'fixed',
-          top: 44,
+          top: 0,
           zIndex: 20,
           display: 'flex'                     
          }}
@@ -290,10 +291,9 @@ function Player() {
       </div>
       <div
         style={{
-          position: 'fixed',
-          top: 62,
-          left: '50%',
-          transform: 'translateX(-50%)',
+          position: 'absolute',
+          top: 68,
+          left: '34%',
           zIndex: 30,
           width: 420,
           background: 'rgba(10,20,40,0.35)',
@@ -369,115 +369,7 @@ function Player() {
           {formatTime(duration)}
         </span>
       </div>
-      {/* <div
-        style={{
-          position: 'fixed',
-          bottom: 24,
-          right: 32,
-          zIndex: 50,
-          display: 'flex',
-          flexDirection: 'row',
-          gap: '10px',
-        }}
-      >
-        <a
-          href="https://open.spotify.com/artist/3QKzy5QsFJh68sQdD7lm0c?si=egVOKiYcS76PecVs52FSgg"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Spotify"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'rgba(244,173,60,0.10)',
-            borderRadius: '6px',
-            padding: '6px',
-            boxShadow: '0 0 16px 4px rgba(244,173,60,0.25)',
-            filter: 'blur(0.2px)',
-            transition: 'box-shadow 0.2s',
-            border: 'none'
-          }}
-        >
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="rgb(244, 173, 60)" strokeWidth="2" fill="none" />
-            <path d="M8 15c2.5-1 5.5-1 8 0" stroke="rgb(244, 173, 60)" strokeWidth="2" strokeLinecap="round" />
-            <path d="M7 12c3-1.5 7-1.5 10 0" stroke="rgb(244, 173, 60)" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M7 9.5c3.5-1 8-1 11.5 0" stroke="rgb(244, 173, 60)" strokeWidth="1" strokeLinecap="round" />
-          </svg>
-        </a>
-        <a
-          href="https://www.tiktok.com/@maypodeluxe"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="TikTok"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'rgba(244,173,60,0.10)',
-            borderRadius: '6px',
-            padding: '6px',
-            boxShadow: '0 0 16px 4px rgba(244,173,60,0.25)',
-            filter: 'blur(0.2px)',
-            transition: 'box-shadow 0.2s',
-            border: 'none'
-          }}
-        >
-          <svg width="32" height="22" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
-              fill="rgb(244, 173, 60)"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.instagram.com/maypodeluxe"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'rgba(244,173,60,0.10)',
-            borderRadius: '6px',
-            padding: '6px',
-            boxShadow: '0 0 16px 4px rgba(244,173,60,0.25)',
-            filter: 'blur(0.2px)',
-            transition: 'box-shadow 0.2s',
-            border: 'none'
-          }}
-        >
-          <svg width="32" height="32" viewBox="0 0 448 512" fill="none">
-            <rect x="64" y="64" width="320" height="320" rx="80" stroke="rgb(244, 173, 60)" strokeWidth="32" fill="none" />
-            <circle cx="224" cy="224" r="80" stroke="rgb(244, 173, 60)" strokeWidth="32" fill="none" />
-            <circle cx="336" cy="112" r="16" fill="rgb(244, 173, 60)" />
-          </svg>
-        </a>
-        <a
-          href="https://www.youtube.com/@maypodeluxe5463"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'rgba(244,173,60,0.10)',
-            borderRadius: '6px',
-            padding: '6px',
-            boxShadow: '0 0 16px 4px rgba(244,173,60,0.25)',
-            filter: 'blur(0.2px)',
-            transition: 'box-shadow 0.2s',
-            border: 'none'
-          }}
-        >
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="6" width="18" height="12" rx="6" stroke="rgb(244, 173, 60)" strokeWidth="2" fill="none" />
-            <polygon points="10,9 16,12 10,15" fill="rgb(244, 173, 60)" />
-          </svg>
-        </a>
-      </div> */}
+
       <Row>
         <Col xs="12" className="p-0">
           <div className="video-wrapper">
@@ -489,7 +381,7 @@ function Player() {
           </div>
         </Col>
 
-        {/* <div className="rec-date-time-container" style={{ paddingLeft: '25px' }}>
+        <div className="rec-date-time-container" style={{ paddingLeft: '25px', display: 'none' }}>
           <div
             className="text-red-600 mb-1 text-lg md:text-xl vcr-font"
             style={{
@@ -503,7 +395,7 @@ function Player() {
       `
             }}
           >
-            ● REC
+           ● REC
           </div>
           <div
             className="vcr-font mb-1 md:text-lg"
@@ -537,7 +429,7 @@ function Player() {
           </div>
         
 
-        </div> */}
+        </div>
       </Row>
     </Container>
   );
