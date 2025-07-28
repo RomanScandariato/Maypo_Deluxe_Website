@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 function Player() {
   const [date, setDate] = useState('');
@@ -48,7 +48,6 @@ function Player() {
     return () => clearInterval(interval);
   }, []);
 
-  // Optional: keep button in sync if user pauses/plays audio via browser controls
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -78,7 +77,6 @@ function Player() {
     };
   }, [audioSrc]);
 
-
   const handleSeek = (e: { target: { value: any; }; }) => {
     const audio = audioRef.current;
     const value = Number(e.target.value);
@@ -95,342 +93,369 @@ function Player() {
   }
 
   return (
-    <Container className='musicPlayer' fluid={true}>
+    <Container className='musicPlayer' fluid={true} style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden', padding: 0 }}>
       <div
+        className="video-wrapper"
         style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
+          position: 'relative',
           width: '100vw',
           height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          pointerEvents: 'none',
-          zIndex: 15
+          overflow: 'hidden'
         }}
       >
-        <h1
+        <video
+          ref={videoRef}
+          src={videoSrc}
+          className="landing-hero-video"
+          autoPlay
+          loop
+          muted
           style={{
-            fontFamily: 'VCR, monospace',
-            color: '#f4ad3c',
-            fontSize: '3.5vw',
-            letterSpacing: '.4vw',
-            textShadow: `
-          0 0 16px rgba(244,173,60,0.8),
-          0 0 32px rgba(244,173,60,0.6),
-          0 0 64px rgba(244,173,60,0.4)
-        `,
-            textTransform: 'uppercase',
-            filter: 'blur(0.5px)',
+            width: '100vw',
+            height: '100vh',
+            objectFit: 'cover',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 1,
+            pointerEvents: 'none'
+          }}
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <audio ref={audioRef} src={audioSrc} loop />
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '100vw',
+            pointerEvents: 'none',
+            zIndex: 15,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: 'VCR, monospace',
+              color: '#f4ad3c',
+              fontSize: '3.5vw',
+              letterSpacing: '.4vw',
+              textShadow: `
+                0 0 16px rgba(244,173,60,0.8),
+                0 0 32px rgba(244,173,60,0.6),
+                0 0 64px rgba(244,173,60,0.4)
+              `,
+              textTransform: 'uppercase',
+              filter: 'blur(0.5px)',
+              margin: 0,
+              textAlign: 'center',
+              userSelect: 'none'
+            }}
+          >
+            {selectedButton === 'one' && 'Around You'}
+            {selectedButton === 'two' && 'Dreaming'}
+            {selectedButton === 'three' && 'Whisper'}
+          </h1>
+        </div>
+        <div
+          className="top-right-btns"
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            zIndex: 20,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '12px',
             margin: 0,
-            textAlign: 'center',
-            userSelect: 'none'
+            padding: '12px 10px 0 0',
+            width: 'auto',
+            alignItems: 'flex-end'
           }}
         >
-          {selectedButton === 'one' && 'Around You'}
-          {selectedButton === 'two' && 'Dreaming'}
-          {selectedButton === 'three' && 'Whisper'}
-        </h1>
-      </div>
-      <div
-        className="top-right-btns"
-        style={{
-          position: 'absolute',
-          width: 150,
-          paddingRight: 10,
-          top: 52,
-          right: 0,
-          zIndex: 20,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '12px',
-          margin: 0,
-          padding: '12px'
-        }}
-      >
-        <button
-          className="btn initial-load"
+          <button
+            className="btn initial-load"
+            style={{
+              fontFamily: 'VCR, monospace',
+              color: '#f4ad3c',
+              fontSize: '20px',
+              letterSpacing: '1.5px',
+              padding: '10px 0px',
+              borderRadius: '12px',
+              textShadow: `
+                0 0 8px rgba(244,173,60,0.8),
+                0 0 16px rgba(244,173,60,0.6),
+                0 0 32px rgba(244,173,60,0.4)
+              `,
+              filter: 'blur(0.75px)',
+              textTransform: 'uppercase',
+              background: 'transparent',
+              border: selectedButton === 'one'
+                ? '2px solid #f4ad3c'
+                : '1px solid #f4ad3c',
+              boxShadow: selectedButton === 'one'
+                ? '0 0 16px 4px rgba(244,173,60,0.4)'
+                : 'none',
+              width: '160px',
+              textAlign: 'center'
+            }}
+            onClick={() => {
+              setAudioSrc('/audio/AroundYou.mp3');
+              setVideoSrc('/videos/Around-You-2024.mp4');
+              setSelectedButton('one');
+              setTimeout(() => {
+                if (audioRef.current) {
+                  audioRef.current.play();
+                  setIsPlaying(true);
+                }
+              }, 0);
+            }}
+          >
+            One
+          </button>
+          <button
+            className="btn initial-load"
+            style={{
+              fontFamily: 'VCR, monospace',
+              color: '#f4ad3c',
+              fontSize: '20px',
+              letterSpacing: '1.5px',
+              padding: '10px 0px',
+              borderRadius: '12px',
+              textShadow: `
+                0 0 8px rgba(244,173,60,0.8),
+                0 0 16px rgba(244,173,60,0.6),
+                0 0 32px rgba(244,173,60,0.4)
+              `,
+              filter: 'blur(0.75px)',
+              textTransform: 'uppercase',
+              background: 'transparent',
+              border: selectedButton === 'two'
+                ? '2px solid #f4ad3c'
+                : '1px solid #f4ad3c',
+              boxShadow: selectedButton === 'two'
+                ? '0 0 16px 4px rgba(244,173,60,0.4)'
+                : 'none',
+              width: '160px',
+              textAlign: 'center'
+            }}
+            onClick={() => {
+              setAudioSrc('/audio/Dreaming.mp3');
+              setVideoSrc('/videos/Dreaming.mp4');
+              setSelectedButton('two');
+              setTimeout(() => {
+                if (audioRef.current) {
+                  audioRef.current.play();
+                  setIsPlaying(true);
+                }
+              }, 0);
+            }}
+          >
+            Two
+          </button>
+          <button
+            className="btn initial-load"
+            style={{
+              fontFamily: 'VCR, monospace',
+              color: '#f4ad3c',
+              fontSize: '20px',
+              letterSpacing: '1.5px',
+              padding: '10px 0px',
+              borderRadius: '12px',
+              textShadow: `
+                0 0 8px rgba(244,173,60,0.8),
+                0 0 16px rgba(244,173,60,0.6),
+                0 0 32px rgba(244,173,60,0.4)
+              `,
+              filter: 'blur(0.75px)',
+              textTransform: 'uppercase',
+              background: 'transparent',
+              border: selectedButton === 'three'
+                ? '2px solid #f4ad3c'
+                : '1px solid #f4ad3c',
+              boxShadow: selectedButton === 'three'
+                ? '0 0 16px 4px rgba(244,173,60,0.4)'
+                : 'none',
+              width: '160px',
+              textAlign: 'center'
+            }}
+            onClick={() => {
+              setAudioSrc('/audio/Whisper.mp3');
+              setVideoSrc('/videos/Whisper.mp4');
+              setSelectedButton('three');
+              setTimeout(() => {
+                if (audioRef.current) {
+                  audioRef.current.play();
+                  setIsPlaying(true);
+                }
+              }, 0);
+            }}
+          >
+            Three
+          </button>
+        </div>
+        <div className="play-btn-top-left"
           style={{
-            fontFamily: 'VCR, monospace',
-            color: 'rgb(244,173,60)',
-            fontSize: '20px',
-            letterSpacing: '1.5px',
-            padding: '10px 40px',
-            borderRadius: '12px',
-            textShadow: `
-      0 0 8px rgba(244,173,60,0.8),
-      0 0 16px rgba(244,173,60,0.6),
-      0 0 32px rgba(244,173,60,0.4)
-    `,
-            filter: 'blur(0.75px)',
-            textTransform: 'uppercase',
-            background: 'transparent',
-            border: selectedButton === 'one'
-              ? '2px solid #f4ad3c'
-              : '1px solid #f4ad3c',
-            boxShadow: selectedButton === 'one'
-              ? '0 0 16px 4px rgba(244,173,60,0.4)'
-              : 'none'
-          }}
-          onClick={() => {
-            setAudioSrc('/audio/AroundYou.mp3');
-            setVideoSrc('/videos/Around-You-2024.mp4');
-            setSelectedButton('one');
-            setTimeout(() => {
-              if (audioRef.current) {
-                audioRef.current.play();
-                setIsPlaying(true);
-              }
-            }, 0);
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 20,
+            display: 'flex'
           }}
         >
-          One
-        </button>
-        <button
-          className="btn initial-load"
+          <button
+            onClick={handleButtonClick}
+            className="btn initial-load mt-3"
+            style={{
+              fontFamily: 'VCR, monospace',
+              color: '#f4ad3c',
+              fontSize: '25px',
+              letterSpacing: '1.5px',
+              textShadow: `
+                0 0 8px rgba(244,173,60,0.8),
+                0 0 16px rgba(244,173,60,0.6),
+                0 0 32px rgba(244,173,60,0.4)
+              `,
+              filter: 'blur(0.75px)',
+              textTransform: 'uppercase'
+            }}
+          >
+            {isPlaying ? '⏸ PAUSE' : '▶ PLAY'}
+          </button>
+        </div>
+        <div
           style={{
-            fontFamily: 'VCR, monospace',
-            color: '#f4ad3c',
-            fontSize: '20px',
-            letterSpacing: '1.5px',
-            padding: '10px 40px',
-            borderRadius: '12px',
+            position: 'absolute',
+            top: 12,
+            left: '34%',
+            zIndex: 30,
+            width: 420,
+            background: 'rgba(10,20,40,0.35)',
+            borderRadius: 16,
+            padding: '12px 32px',
+            boxShadow: '0 0 32px 8px rgba(244,173,60,0.18)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 18,
+            border: '2px solid #f4ad3c',
             textShadow: `
               0 0 8px rgba(244,173,60,0.8),
               0 0 16px rgba(244,173,60,0.6),
               0 0 32px rgba(244,173,60,0.4)
             `,
-            filter: 'blur(0.75px)',
-            textTransform: 'uppercase',
-            background: 'transparent',
-            border: selectedButton === 'two'
-              ? '2px solid rgb(244,173,60)'
-              : '1px solid rgb(244,173,60)',
-            boxShadow: selectedButton === 'two'
-              ? '0 0 16px 4px rgba(244,173,60,0.4)'
-              : 'none'
-          }}
-          onClick={() => {
-            setAudioSrc('/audio/Dreaming.mp3');
-            setVideoSrc('/videos/Dreaming.mp4');
-            setSelectedButton('two');
-            setTimeout(() => {
-              if (audioRef.current) {
-                audioRef.current.play();
-                setIsPlaying(true);
-              }
-            }, 0);
-          }}
-        >
-          Two
-        </button>
-        <button
-          className="btn initial-load"
-          style={{
             fontFamily: 'VCR, monospace',
-            color: '#f4ad3c',
-            fontSize: '20px',
-            letterSpacing: '1.5px',
-            padding: '10px 40px',
-            borderRadius: '12px',
-            textShadow: `
-      0 0 8px rgba(244,173,60,0.8),
-      0 0 16px rgba(244,173,60,0.6),
-      0 0 32px rgba(244,173,60,0.4)
-    `,
-            filter: 'blur(0.75px)',
-            textTransform: 'uppercase',
-            background: 'transparent',
-            border: '2px solid ' + (selectedButton === 'three' ? 'rgb(244,173,60)' : 'rgba(244,173,60,0.5)'),
-            boxShadow: selectedButton === 'three'
-              ? '0 0 16px 4px rgba(244,173,60,0.4)'
-              : 'none'
-          }}
-          onClick={() => {
-            setAudioSrc('/audio/Whisper.mp3');
-            setVideoSrc('/videos/Whisper.mp4');
-            setSelectedButton('three');
-            setTimeout(() => {
-              if (audioRef.current) {
-                audioRef.current.play();
-                setIsPlaying(true);
-              }
-            }, 0);
+            filter: 'blur(0.2px)',
+            backdropFilter: 'blur(2px)',
           }}
         >
-          Three
-        </button>
-      </div>
-      <div className="play-btn-top-left"
-         style={{
-          top: 0,
-          zIndex: 20,
-          display: 'flex'                     
-         }}
-      >
-        <button
-          onClick={handleButtonClick}
-          className="btn initial-load mt-3"
-          style={{
+          <span style={{
+            color: '#f4ad3c',
             fontFamily: 'VCR, monospace',
-            color: '#f4ad3c',
-            fontSize: '25px',
-            letterSpacing: '1.5px',
+            minWidth: 48,
+            textAlign: 'right',
+            fontSize: '1.2rem',
+            letterSpacing: '2px',
             textShadow: `
-        0 0 8px rgba(244,173,60,0.8),
-        0 0 16px rgba(244,173,60,0.6),
-        0 0 32px rgba(244,173,60,0.4)
-      `,
-            filter: 'blur(0.75px)',
-            textTransform: 'uppercase'
-          }}
-        >
-          {isPlaying ? '⏸ PAUSE' : '▶ PLAY'}
-        </button>
-      </div>
-      <div
-        style={{
-          position: 'absolute',
-          top: 68,
-          left: '34%',
-          zIndex: 30,
-          width: 420,
-          background: 'rgba(10,20,40,0.35)',
-          borderRadius: 16,
-          padding: '12px 32px',
-          boxShadow: '0 0 32px 8px rgba(244,173,60,0.18)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 18,
-          border: '2px solid #f4ad3c',
-          textShadow: `
-      0 0 8px rgba(244,173,60,0.8),
-      0 0 16px rgba(244,173,60,0.6),
-      0 0 32px rgba(244,173,60,0.4)
-    `,
-          fontFamily: 'VCR, monospace',
-          filter: 'blur(0.2px)',
-          backdropFilter: 'blur(2px)',
-        }}
-      >
-        <span style={{
-          color: '#f4ad3c',
-          fontFamily: 'VCR, monospace',
-          minWidth: 48,
-          textAlign: 'right',
-          fontSize: '1.2rem',
-          letterSpacing: '2px',
-          textShadow: `
-      0 0 8px rgba(244,173,60,0.8),
-      0 0 16px rgba(244,173,60,0.6),
-      0 0 32px rgba(244,173,60,0.4)
-    `
-        }}>
-          {formatTime(currentTime)}
-        </span>
-        <input
-          type="range"
-          min={0}
-          max={duration}
-          value={currentTime}
-          step="0.01"
-          onChange={handleSeek}
-          style={{
-            flex: 1,
-            accentColor: '#f4ad3c',
-            height: 8,
-            borderRadius: 4,
-            background: 'rgba(168,110,60,0.08)',
-            boxShadow: `
-        0 0 8px rgba(244,173,60,0.8),
-        0 0 16px rgba(244,173,60,0.6)
-      `,
-            outline: 'none',
-            border: '1.5px solid rgba(244,173,60,0.5)',
-            margin: '0 12px',
-            WebkitAppearance: 'none',
-            appearance: 'none',
-          }}
-        />
-        <span style={{
-          color: '#f4ad3c',
-          fontFamily: 'VCR, monospace',
-          minWidth: 48,
-          textAlign: 'left',
-          fontSize: '1.2rem',
-          letterSpacing: '2px',
-          textShadow: `
-      0 0 8px rgba(244,173,60,0.8),
-      0 0 16px rgba(244,173,60,0.6),
-      0 0 32px rgba(244,173,60,0.4)
-    `
-        }}>
-          {formatTime(duration)}
-        </span>
-      </div>
-
-      <Row>
-        <Col xs="12" className="p-0">
-          <div className="video-wrapper">
-            <video ref={videoRef} src={videoSrc} className="landing-hero-video" autoPlay loop muted>
-              <source src={videoSrc} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <audio ref={audioRef} src={audioSrc} loop />
-          </div>
-        </Col>
-
-        <div className="rec-date-time-container" style={{ paddingLeft: '25px', display: 'none' }}>
-          <div
-            className="text-red-600 mb-1 text-lg md:text-xl vcr-font"
+              0 0 8px rgba(244,173,60,0.8),
+              0 0 16px rgba(244,173,60,0.6),
+              0 0 32px rgba(244,173,60,0.4)
+            `
+          }}>
+            {formatTime(currentTime)}
+          </span>
+          <input
+            type="range"
+            min={0}
+            max={duration}
+            value={currentTime}
+            step="0.01"
+            onChange={handleSeek}
             style={{
-              fontFamily: 'VCR, monospace',
-              color: 'rgb(255, 0, 0)',
-              filter: 'blur(1px)',
-              textShadow: `
-        0 0 8px rgba(255,0,0,0.8),
-        0 0 16px rgba(255,0,0,0.6),
-        0 0 32px rgba(255,0,0,0.4)
-      `
+              flex: 1,
+              accentColor: '#f4ad3c',
+              height: 8,
+              borderRadius: 4,
+              background: 'rgba(168,110,60,0.08)',
+              boxShadow: `
+                0 0 8px rgba(244,173,60,0.8),
+                0 0 16px rgba(244,173,60,0.6)
+              `,
+              outline: 'none',
+              border: '1.5px solid rgba(244,173,60,0.5)',
+              margin: '0 12px',
+              WebkitAppearance: 'none',
+              appearance: 'none',
             }}
-          >
-           ● REC
-          </div>
-          <div
-            className="vcr-font mb-1 md:text-lg"
-            style={{
-              fontFamily: 'VCR, monospace',
-              color: 'rgb(222, 236, 250)',
-              filter: 'blur(1px)',
-              textShadow: `
-        0 0 8px rgba(244,173,60,0.8),
-        0 0 16px rgba(244,173,60,0.6),
-        0 0 32px rgba(244,173,60,0.4)
-      `
-            }}
-          >
-            {date}
-          </div>
-          <div
-            className="vcr-font md:text-lg"
-            style={{
-              fontFamily: 'VCR, monospace',
-              color: 'rgb(222, 236, 250)',
-              filter: 'blur(1px)',
-              textShadow: `
-        0 0 8px rgba(244,173,60,0.8),
-        0 0 16px rgba(244,173,60,0.6),
-        0 0 32px rgba(244,173,60,0.4)
-      `
-            }}
-          >
-            {time}
-          </div>
-        
-
+          />
+          <span style={{
+            color: '#f4ad3c',
+            fontFamily: 'VCR, monospace',
+            minWidth: 48,
+            textAlign: 'left',
+            fontSize: '1.2rem',
+            letterSpacing: '2px',
+            textShadow: `
+              0 0 8px rgba(244,173,60,0.8),
+              0 0 16px rgba(244,173,60,0.6),
+              0 0 32px rgba(244,173,60,0.4)
+            `
+          }}>
+            {formatTime(duration)}
+          </span>
         </div>
-      </Row>
+      </div>
+      <div className="rec-date-time-container" style={{ position: 'absolute', top: 0, left: 0, paddingLeft: '25px', display: 'none', zIndex: 40 }}>
+        <div
+          className="text-red-600 mb-1 text-lg md:text-xl vcr-font"
+          style={{
+            fontFamily: 'VCR, monospace',
+            color: 'rgb(255, 0, 0)',
+            filter: 'blur(1px)',
+            textShadow: `
+              0 0 8px rgba(255,0,0,0.8),
+              0 0 16px rgba(255,0,0,0.6),
+              0 0 32px rgba(255,0,0,0.4)
+            `
+          }}
+        >
+          ● REC
+        </div>
+        <div
+          className="vcr-font mb-1 md:text-lg"
+          style={{
+            fontFamily: 'VCR, monospace',
+            color: 'rgb(222, 236, 250)',
+            filter: 'blur(1px)',
+            textShadow: `
+              0 0 8px rgba(244,173,60,0.8),
+              0 0 16px rgba(244,173,60,0.6),
+              0 0 32px rgba(244,173,60,0.4)
+            `
+          }}
+        >
+          {date}
+        </div>
+        <div
+          className="vcr-font md:text-lg"
+          style={{
+            fontFamily: 'VCR, monospace',
+            color: 'rgb(222, 236, 250)',
+            filter: 'blur(1px)',
+            textShadow: `
+              0 0 8px rgba(244,173,60,0.8),
+              0 0 16px rgba(244,173,60,0.6),
+              0 0 32px rgba(244,173,60,0.4)
+            `
+          }}
+        >
+          {time}
+        </div>
+      </div>
     </Container>
   );
 }
