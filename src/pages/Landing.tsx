@@ -108,7 +108,7 @@ function Landing() {
           <h1 className="text-center landing-text">Maypo Deluxe</h1>
           <h3 className="text-center landing-text-two">Check Out Our Latest Release!</h3>
           <div className="d-flex justify-content-center">
-            <button onClick={handleButtonClick} className="btn custom-button initial-load mt-3">Latest Release</button>
+            <button onClick={handleButtonClick} className="latest-release-button">Latest Release</button>
           </div>
         </Col>
       </Row>
