@@ -166,14 +166,14 @@ function Player() {
           className="top-right-btns"
           style={{
             position: 'absolute',
-            top: 0,
+            top: -10,
             right: 0,
             zIndex: 20,
             display: 'flex',
             flexDirection: 'column',
             gap: '12px',
             margin: 0,
-            padding: '12px 10px 0 0',
+            padding: '12px 28px 0 0',
             width: 'auto',
             alignItems: 'flex-end'
           }}
@@ -302,7 +302,7 @@ function Player() {
         <div className="play-btn-top-left"
           style={{
             position: 'absolute',
-            top: 0,
+            top: 9,
             left: 0,
             zIndex: 20,
             display: 'flex'
@@ -310,7 +310,8 @@ function Player() {
         >
           <button
             onClick={handleButtonClick}
-            className="btn initial-load mt-3"
+            className = "play-pause"
+            //className="btn initial-load mt-3"
             style={{
               fontFamily: 'VCR, monospace',
               color: '#f4ad3c',
@@ -328,10 +329,10 @@ function Player() {
             {isPlaying ? '⏸ PAUSE' : '▶ PLAY'}
           </button>
         </div>
-        <div
+        <div className="player-control"
           style={{
             position: 'absolute',
-            top: 12,
+            top: 2,
             left: '34%',
             zIndex: 30,
             width: 420,
@@ -353,7 +354,7 @@ function Player() {
             backdropFilter: 'blur(2px)',
           }}
         >
-          <span style={{
+          <span className="player-span" style={{
             color: '#f4ad3c',
             fontFamily: 'VCR, monospace',
             minWidth: 48,
@@ -369,6 +370,7 @@ function Player() {
             {formatTime(currentTime)}
           </span>
           <input
+            className = "player-range"
             type="range"
             min={0}
             max={duration}
@@ -392,7 +394,7 @@ function Player() {
               appearance: 'none',
             }}
           />
-          <span style={{
+          <span className="player-time" style={{
             color: '#f4ad3c',
             fontFamily: 'VCR, monospace',
             minWidth: 48,

@@ -15,7 +15,7 @@ function Header() {
               <>
                 <Nav.Link as={NavLink} to="/songs" style={textStyle}>Songs</Nav.Link>
                 <Nav.Link as={NavLink} to="/photos" style={textStyle}>Photos</Nav.Link>
-                <Nav.Link as={NavLink} to="/player" style={textStyle}>Player</Nav.Link>
+                {/* <Nav.Link as={NavLink} to="/player" style={textStyle}>Player</Nav.Link> */}
                 <Nav.Link as={NavLink} to="/contact" style={textStyle}>Contact</Nav.Link>
               </>
           </Nav>
