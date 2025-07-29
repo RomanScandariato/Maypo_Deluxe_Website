@@ -78,6 +78,7 @@ html, body, #root {
   background-color: #e1a23d !important;
   color: white !important;
   border: none;
+  top: 8px;
   padding: 3px 15px;
   font-size: 18px;
   border-radius: 5px;
