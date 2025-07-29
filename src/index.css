@@ -327,6 +327,14 @@ html, body, #root {
   margin-left: 150px !important;
 }
 
+.play-pause {
+    top: 17px;
+    font-size: 24px;
+    width: 200px;
+    background: transparent;
+    border: none;    
+}
+
 @media (max-width: 768px) {
   .landing-text {
     font-size: 6rem;
@@ -346,12 +354,60 @@ html, body, #root {
     margin-left: 0;
     text-align: center;
   }
-
   .social-image {
     margin-left: 0 !important;
     margin-top: 20px;
     width: 80%;
   }
+}
+
+@media (max-width: 700px) {
+  .play-btn-top-left {
+    top: 11px !important;
+  }
+
+  .play-pause {
+    font-size:13px !important;
+    width: 66px !important;
+    filter: none !important;
+    letter-spacing: 0.5px !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .player-control {
+    top: 11px !important;
+    width: 248px !important;
+    min-width: 45px !important;
+    padding: 0px !important; 
+    gap: 0px !important;
+    left: 20% !important;   
+  }
+  .player-span {
+    font-size: 10pt !important;
+  }
+
+  .player-range {
+    height: 4px !important;
+    left: 13% !important;
+  }
+
+  .player-time {
+    font-size: 10pt !important;    
+  }
+
+  /* buttons */
+  .initial-load
+  {
+    font-size: 11px !important;
+    width: 46px !important;   
+  }
+  .top-right-btns {  
+    padding: 21px 9px 0px 0px !important;
+    letter-spacing: 0.4px !important;
+ 
+  }
+
 }
 
 @media (max-width: 490px) {
