@@ -8,6 +8,21 @@ function Landing() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const response = await fetch(
+    'https://maypodeluxe.development.google.ekodb.net/api/auth/token', {
+     method: 'POST',
+     headers: { 'Content-Type': 'application/json' },
+     body: JSON.stringify({ api_key: '1960c292-518e-4106-8e94-325370074313' })
+    });
+
+    const { token } = await response.json();
+    console.log(token);
+  }
+
+
+  /*
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     const form = formRef.current;
     if (form) {
       const formData = new FormData(form);
@@ -26,6 +41,7 @@ function Landing() {
       }
     }
   };
+  */
 
   const bioRef = useRef(null);
   const paragraphRefs = useRef<(HTMLParagraphElement | null)[]>([]);
