@@ -59,11 +59,36 @@ function Songs() {
               </details>
           </ListGroup.Item>
           </Col>
+        <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Come On Home</h4>
+            <p>Album: Make Believe</p>
+            <img src="images/Make-Believe.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/track/7fAl8JaWrQLgIrNpOOh4r8" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>
+                  An ever-unpredictable Maypo Deluxe adopts a classic rock and roll presence throughout the Dylan-esque sentiments and style of a brilliantly uplifting Come On Home.
+                </p><p>
+                Passionately delivered yet backed by a humble pop-rock rise and fall, Come On Home feels like a timeless classic – an ode to the good times with an organic arrangement that can easily translate to any and all settings.
+                </p><p>
+                The music of Maypo Deluxe has always stood tall, mainly because of a unique manner of framing ideas – blending effective songwriting with subtle twists of unexpected expression throughout a largely genre-free progression. Organic musicianship tends to be a strength too, and in this case it’s the humility of that which allows the natural passion and warmth of the writing and leading vocal to connect so easily.
+                </p><p>
+                An essential must for this month's playlist, and indeed the kind of anthemic pop-rock hit that will likely reappear for years to come – and lift the mood and satisfy to the same degree every time that it does. Come On Home is everything a good song needs to be in order to engage with and calm the true music fan.
+                </p>
+              </details>
+          </ListGroup.Item>
+          </Col>
+
           <Col xs={12} md={4} className="mb-4">
           <ListGroup.Item className="song-item">
             <h4>Lonely Road</h4>
             <p>Album: Make Believe</p>
-            <img src="images/lonely_road.png" className="img-fluid mb-3 w-50" />
+            <img src="images/Make-Believe.png" className="img-fluid mb-3 w-50" />
             <p>
               <a href="https://open.spotify.com/album/3qYikl5lX3IA96hA7t3hD6" target="_blank" rel="noopener noreferrer">
                 Listen on Spotify
