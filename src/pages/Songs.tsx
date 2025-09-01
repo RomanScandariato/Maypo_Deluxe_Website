@@ -8,9 +8,42 @@ function Songs() {
         <Row>
         <Col xs={12} md={4} className="mb-4">
           <ListGroup.Item className="song-item">
+            <h4>Keep On Moving</h4>
+            <p>Album: Make Believe</p>
+            <img src="images/Make-Believe.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/track/2xvmV1bCMvk02xVpdIJIB9" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>No Article Yet</p>
+              </details>
+          </ListGroup.Item>
+          </Col>
+        <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Find My Way</h4>
+            <p>Album: Make Believe</p>
+            <img src="images/Make-Believe.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/track/6DQSbYUgX6Y1r6jW7Y23Rv" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>No Article Yet</p>
+              </details>
+          </ListGroup.Item>
+          </Col>
+
+        <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
             <h4>If I Only Knew</h4>
-            <p>Album: Going Steady</p>
-            <img src="images/If_I_Only_Knew.png" className="img-fluid mb-3 w-50" />
+            <p>Album: Make Believe</p>
+            <img src="images/Make-Believe.png" className="img-fluid mb-3 w-50" />
             <p>
               <a href="https://open.spotify.com/track/4uTe4L4cZcU5C2mkFmfpSu" target="_blank" rel="noopener noreferrer">
                 Listen on Spotify
@@ -26,6 +59,27 @@ function Songs() {
               </details>
           </ListGroup.Item>
           </Col>
+          <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Lonely Road</h4>
+            <p>Album: Make Believe</p>
+            <img src="images/lonely_road.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/album/3qYikl5lX3IA96hA7t3hD6" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>Soul-rock seduction at its finest, heartfelt and briefly melancholic for that classic blues thread, but with a crisp, contemporary finish – allowing this accessible, light and expressive vocal-lead to hit with clear identity and emotion.</p>
+                <p>Backed by the simple swagger of an electric guitar, bass and mellow drum arrangement, Lonely Road is the latest single from an ever-engaging Maypo Deluxe – proving once again that this is one of the most consistently effective corners of indie songwriting.</p>
+                <p>Beautifully captured, there’s a familiarity to the set-up of Lonely Road, but a freshness to the clear passion and delicacy and even grit of the vocal performance. There’s also an element of originality interwoven amidst the recognisable poetic references of the lyrics – this dark lonely road is nothing new, but the details of the longing, the admiration, the optimism, all brings something authentic and honest to the stage.</p>
+                <p>Promising more than a few moments of sultry, alluring guitar solo-work, and that ongoing blues-rock rhythm that just grips the listener and sways them from start to finish, Lonely Road comes in at a fairly extensive four-thirty-six, and proceeds through various stages of sadness towards satisfaction and overcoming.</p>
+                <p>No spoiler necessary, but this one leaves you feeling a sense of possibility and gratitude. It’s a refreshing twist on the traditional blues sentiment, and a pleasure to listen to at volume.</p>
+                <p>By Rebecca Cullen</p>
+              </details>
+          </ListGroup.Item>
+          </Col>          
           <Col xs={12} md={4} className="mb-4">
           <ListGroup.Item className="song-item">
             <h4>Free</h4>
@@ -96,27 +150,6 @@ function Songs() {
                 <p>Production-wise, Maypo Deluxe has done a fine job with reflecting the positivity and excitement of the lyrics in the pace and detail of the design. The leading voice is humble yet genuinely impassioned, and is backed by quietly harmonised vocals that whisper further warmth into the mix. All of this is reminiscent of an old school style in many ways, but the clarity of the final arrangement, the simple and satisfying resolve of the hook, all works well to build its own sense of identity – and to hand over an indisputable earworm in the process.</p>
                 <p>Celebrate the time spent with people who make the world seem beautiful. Around You is a superb indie track to fire up the new year, and makes for a fine introduction to the ever-impressive and enjoyable catalogue of original music that is the Maypo Deluxe discography.</p>
             </details>
-          </ListGroup.Item>
-          </Col>
-          <Col xs={12} md={4} className="mb-4">
-          <ListGroup.Item className="song-item">
-            <h4>Lonely Road</h4>
-            <p>Album: Going Steady</p>
-            <img src="images/lonely_road.png" className="img-fluid mb-3 w-50" />
-            <p>
-              <a href="https://open.spotify.com/album/3qYikl5lX3IA96hA7t3hD6" target="_blank" rel="noopener noreferrer">
-                Listen on Spotify
-              </a>
-            </p>
-            <details className="flex-fill" style={{ marginBottom: '10px' }}>
-            <summary>Article</summary>
-                <p>Soul-rock seduction at its finest, heartfelt and briefly melancholic for that classic blues thread, but with a crisp, contemporary finish – allowing this accessible, light and expressive vocal-lead to hit with clear identity and emotion.</p>
-                <p>Backed by the simple swagger of an electric guitar, bass and mellow drum arrangement, Lonely Road is the latest single from an ever-engaging Maypo Deluxe – proving once again that this is one of the most consistently effective corners of indie songwriting.</p>
-                <p>Beautifully captured, there’s a familiarity to the set-up of Lonely Road, but a freshness to the clear passion and delicacy and even grit of the vocal performance. There’s also an element of originality interwoven amidst the recognisable poetic references of the lyrics – this dark lonely road is nothing new, but the details of the longing, the admiration, the optimism, all brings something authentic and honest to the stage.</p>
-                <p>Promising more than a few moments of sultry, alluring guitar solo-work, and that ongoing blues-rock rhythm that just grips the listener and sways them from start to finish, Lonely Road comes in at a fairly extensive four-thirty-six, and proceeds through various stages of sadness towards satisfaction and overcoming.</p>
-                <p>No spoiler necessary, but this one leaves you feeling a sense of possibility and gratitude. It’s a refreshing twist on the traditional blues sentiment, and a pleasure to listen to at volume.</p>
-                <p>By Rebecca Cullen</p>
-              </details>
           </ListGroup.Item>
           </Col>
         </Row>
