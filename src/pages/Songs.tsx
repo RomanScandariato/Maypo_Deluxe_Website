@@ -73,11 +73,14 @@ function Songs() {
             <summary>Article</summary>
                 <p>
                   An ever-unpredictable Maypo Deluxe adopts a classic rock and roll presence throughout the Dylan-esque sentiments and style of a brilliantly uplifting Come On Home.
-                </p><p>
+                </p>
+                <p>
                 Passionately delivered yet backed by a humble pop-rock rise and fall, Come On Home feels like a timeless classic – an ode to the good times with an organic arrangement that can easily translate to any and all settings.
-                </p><p>
+                </p>
+                <p>
                 The music of Maypo Deluxe has always stood tall, mainly because of a unique manner of framing ideas – blending effective songwriting with subtle twists of unexpected expression throughout a largely genre-free progression. Organic musicianship tends to be a strength too, and in this case it’s the humility of that which allows the natural passion and warmth of the writing and leading vocal to connect so easily.
-                </p><p>
+                </p>
+                <p>
                 An essential must for this month's playlist, and indeed the kind of anthemic pop-rock hit that will likely reappear for years to come – and lift the mood and satisfy to the same degree every time that it does. Come On Home is everything a good song needs to be in order to engage with and calm the true music fan.
                 </p>
               </details>
