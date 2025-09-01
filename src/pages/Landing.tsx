@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function Landing() {
   const handleButtonClick = () => {
-    window.open('https://open.spotify.com/album/1SrcuL7RuS0EJLKjNzJboE', '_blank');
+    window.open('https://open.spotify.com/track/2xvmV1bCMvk02xVpdIJIB9', '_blank');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
