@@ -256,6 +256,16 @@ html, body, #root {
   }
 }
 
+  .order-zip-size {
+    width: 108px;
+  }
+  .order-state-size {
+    width: 130px;
+  }
+  .order-city-size {
+    width: 260px;
+  }
+
 .song-item {
   background-color: #fff;
   border-radius: 10px !important;
@@ -428,6 +438,7 @@ html, body, #root {
  
   }
 
+
 }
 
 @media (max-width: 490px) {
@@ -446,4 +457,6 @@ html, body, #root {
   .social-image {
     width: 100%; 
   }
+
+
 }
