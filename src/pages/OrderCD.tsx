@@ -47,10 +47,14 @@ function OrderCD() {
 
   return (
     <Container fluid={true}>
+
       <Row className="mt-5 fade-in" ref={mailingListRef}>
-        <Col xs="12">
+        <Col xs="12"> 
+          <div className="order-cd-image">
+             <img src='/images/Make-Believe.png' width="160" ></img>
+          </div>
           <h1 className="text-center newsletter-header">Order Make Believe</h1>
-          <p className="text-center newsletter-extra">Currently accepting Venmo and shipping to the US Only. We'll send a request for payment via Venmo. For singles (mp3's) use Amazon Music.</p>
+          <p className="text-center newsletter-extra">Currently accepting Venmo and shipping to the US Only. CD's are $12.99, and $2.50 for shipping. We'll send a request for payment via Venmo. For singles (mp3's) use Amazon Music.</p>
           <Form ref={formRef} onSubmit={submitOrder} className="newsletter-form">
             <Form.Group controlId="formAddress">
               <Form.Control type="address1" name="address1" placeholder="Address" required />
