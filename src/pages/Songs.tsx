@@ -18,7 +18,12 @@ function Songs() {
             </p>
             <details className="flex-fill" style={{ marginBottom: '10px' }}>
             <summary>Article</summary>
-                <p>No Article Yet</p>
+                <p>Long-time favourite in both songwriting and style – Maypo Deluxe releases a highly-anticipated album, from which two singles have already shone light on the versatility and talent of his creative approach.</p>
+                <p>Keep on Moving is an infectious rock and roll single, a slick guitar sound gifting something like Americana to a catchy, short-lined gem of an energetic track. It’s a joyous progression, a full-band arrangement with a sublime old-school guitar tone, and all the while, that Maypo Deluxe voice adds conviction and uplift, as we roll towards a simple and smart chorus.</p>
+                <p>There’s a nostalgic familiarity and comfort to this kind of raw indie rock and roll, but there’s also just enough character and playful creativity to help maintain the recognisable identity of all things Maypo Deluxe. The song has purpose, we’re inspired to consider the value and necessity of real love, and to essentially keep moving forwards – head up, stay strong, carry on.</p>
+                <p>Keep On Moving is an anthem for the disenchanted, a reminder to focus on the positive things, but not without realistic consideration of the struggles. And it’s all subtle, not lyrically dense but focused, snappy, sharp, and the leading riff has that same distinct quality – a memorable introduction and backbone, which effectively lets the track linger indefinitely in the mind.</p>
+                <p>Wake yourself up for the colder seasons, with a rock and roll single designed to energise and inspire. The brand new Maypo Deluxe album is one to watch out for this month.</p>
+                <p>Article by Rebecca Cullen</p>
               </details>
           </ListGroup.Item>
           </Col>
@@ -83,6 +88,7 @@ function Songs() {
                 <p>
                 An essential must for this month's playlist, and indeed the kind of anthemic pop-rock hit that will likely reappear for years to come – and lift the mood and satisfy to the same degree every time that it does. Come On Home is everything a good song needs to be in order to engage with and calm the true music fan.
                 </p>
+                <p>Article by Rebecca Cullen</p>
               </details>
           </ListGroup.Item>
           </Col>
@@ -104,7 +110,7 @@ function Songs() {
                 <p>Beautifully captured, there’s a familiarity to the set-up of Lonely Road, but a freshness to the clear passion and delicacy and even grit of the vocal performance. There’s also an element of originality interwoven amidst the recognisable poetic references of the lyrics – this dark lonely road is nothing new, but the details of the longing, the admiration, the optimism, all brings something authentic and honest to the stage.</p>
                 <p>Promising more than a few moments of sultry, alluring guitar solo-work, and that ongoing blues-rock rhythm that just grips the listener and sways them from start to finish, Lonely Road comes in at a fairly extensive four-thirty-six, and proceeds through various stages of sadness towards satisfaction and overcoming.</p>
                 <p>No spoiler necessary, but this one leaves you feeling a sense of possibility and gratitude. It’s a refreshing twist on the traditional blues sentiment, and a pleasure to listen to at volume.</p>
-                <p>By Rebecca Cullen</p>
+                <p>Article By Rebecca Cullen</p>
               </details>
           </ListGroup.Item>
           </Col>          
@@ -156,7 +162,7 @@ function Songs() {
                 <p>Leading with a kind of soft-rock swagger through the mellow energy then rising anticipation of its verses, You’re Nowhere quickly progresses into indie rock anthem territory once the chorus drops in. Here the soundscape brightens, the vocal reaches new passionate realms, and the simplicity of the line embraces listeners in an immediately welcoming, soon addictive manner.</p>
                 <p>The whole thing feels like a nineties rock hit ready and waiting to be rediscovered – Ocean Colour Scene, The Stone Roses, Goo Goo Dolls; the warmth and emotion, the organic and crisp set-up.</p>
                 <p>It’s a fresh step away from Waiting, but it still fits the style, offers a powerful midde-8 and guitar solo, and lights up a new side to the artist’s creative arena. Well worth a listen at volume.</p>
-                <p>By Rebecca Cullen</p>
+                <p>Article By Rebecca Cullen</p>
               </details>
           </ListGroup.Item>
           </Col>
@@ -177,6 +183,7 @@ function Songs() {
                 <p>Fast-paced and light yet uplifting from the outset, the fullness of this pop-rock and mild-punk set-up is quick to lift the mood of the room. The chord pattern depicts a sense of appreciation and warmth, and the lyrics follow suit accordingly – offering a song that openly celebrates the unrivalled appeal and connection found when spending time with someone who truly lights up your day.</p>
                 <p>Production-wise, Maypo Deluxe has done a fine job with reflecting the positivity and excitement of the lyrics in the pace and detail of the design. The leading voice is humble yet genuinely impassioned, and is backed by quietly harmonised vocals that whisper further warmth into the mix. All of this is reminiscent of an old school style in many ways, but the clarity of the final arrangement, the simple and satisfying resolve of the hook, all works well to build its own sense of identity – and to hand over an indisputable earworm in the process.</p>
                 <p>Celebrate the time spent with people who make the world seem beautiful. Around You is a superb indie track to fire up the new year, and makes for a fine introduction to the ever-impressive and enjoyable catalogue of original music that is the Maypo Deluxe discography.</p>
+                <p>Article by Rebecca Cullen</p>
             </details>
           </ListGroup.Item>
           </Col>
