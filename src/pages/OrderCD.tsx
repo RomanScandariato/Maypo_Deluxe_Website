@@ -56,9 +56,9 @@ function OrderCD() {
     <Container fluid={true}>
 
       <Row className="mt-5 fade-in" ref={mailingListRef}>
-        <Col xs="12"> 
+        <Col xs="12">
           <div className="order-cd-image">
-             <img src='/images/Make-Believe.png' width="160" ></img>
+            <img src='/images/Make-Believe.png' width="160" ></img>
           </div>
           <h1 className="text-center newsletter-header">Order Make Believe</h1>
           <p className="text-center newsletter-extra">Currently accepting Venmo and shipping to the US Only. CD's are $12.99, and $2.50 for shipping. We'll send a request for payment via Venmo. For singles (mp3's) use Amazon Music.</p>
@@ -69,13 +69,13 @@ function OrderCD() {
             <Form.Group controlId="formAddress2">
               <Form.Control type="address2" name="address2" placeholder="" />
             </Form.Group>
-            
+
             <Form.Group className='order-city-size' controlId="formCity">
-              <Form.Control  type="city" name="city" placeholder="Enter your City" required />
+              <Form.Control type="city" name="city" placeholder="Enter your City" required />
             </Form.Group>
 
             <Form.Group className="order-state-size" controlId="formState">
-              <Form.Select>
+              <Form.Select name="state" required>
                 <option value="">State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -127,7 +127,7 @@ function OrderCD() {
                 <option value="WA">Washington</option>
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
-                <option value="WY">Wyoming</option>                
+                <option value="WY">Wyoming</option>
               </Form.Select>
             </Form.Group>
 
@@ -137,17 +137,17 @@ function OrderCD() {
             <Form.Group controlId="formVenmoID" >
               <Form.Control type="text" name="Your Venmo ID" placeholder="@my-venmo-id" required />
             </Form.Group>
-            
+
             <Col >
-            <Form.Group controlId="formCopies">
-                <Form.Select aria-label="">
-                    <option value="">Number Of Copies</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+              <Form.Group controlId="formCopies">
+                <Form.Select name="copies" required>
+                  <option value="">Number Of Copies</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
                 </Form.Select>
-            </Form.Group>            
+              </Form.Group>
             </Col>
             <Button type="submit">Place Your Order</Button>
           </Form>
