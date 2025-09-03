@@ -3,19 +3,26 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function OrderCD() {
 
-
   const submitOrder = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch(
-    'https://maypodeluxe.development.google.ekodb.net/api/auth/token', {
-     method: 'POST',
-     headers: { 'Content-Type': 'application/json' },
-     body: JSON.stringify({ api_key: '1960c292-518e-4106-8e94-325370074313' })
-    });
-
-    const { token } = await response.json();
-    console.log(token);
-  }
+    const form = formRef.current;
+    if (form) {
+      const formData = new FormData(form);
+      const response = await fetch('https://formspree.io/f/xrbgvday', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      if (response.ok) {
+        alert('Subscription successful!');
+        form.reset();
+      } else {
+        alert('Subscription failed. Please try again.');
+      }
+    }
+  };
 
   const mailingListRef = useRef(null);
   const formRef = useRef<HTMLFormElement>(null);
