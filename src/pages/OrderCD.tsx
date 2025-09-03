@@ -16,10 +16,10 @@ function OrderCD() {
         }
       });
       if (response.ok) {
-        alert('Subscription successful!');
+        alert('We will send a payment request via Venmo!');
         form.reset();
       } else {
-        alert('Subscription failed. Please try again.');
+        alert('Order failed. Please try again.');
       }
     }
   };
