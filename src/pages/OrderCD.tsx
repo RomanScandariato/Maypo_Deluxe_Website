@@ -63,6 +63,9 @@ function OrderCD() {
           <h1 className="text-center newsletter-header">Order Make Believe</h1>
           <p className="text-center newsletter-extra">Currently accepting Venmo and shipping to the US Only. CD's are $12.99, and $2.50 for shipping. We'll send a request for payment via Venmo. For singles (mp3's) use Amazon Music.</p>
           <Form ref={formRef} onSubmit={submitOrder} className="newsletter-form">
+            <Form.Group controlId="name">
+              <Form.Control type="name" name="name" placeholder="Your Full Name" required />
+            </Form.Group>
             <Form.Group controlId="formAddress">
               <Form.Control type="address1" name="address1" placeholder="Address" required />
             </Form.Group>
