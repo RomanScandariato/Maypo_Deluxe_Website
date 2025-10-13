@@ -119,7 +119,7 @@ function Songs() {
           <ListGroup.Item className="song-item">
             <h4>Free</h4>
             <p>Album: Home Coming</p>
-            <img src="images/free.png" className="img-fluid mb-3 w-50" />
+            <img src="images/Homecoming_updated.png" className="img-fluid mb-3 w-50" />
             <p>
               <a href="https://open.spotify.com/track/6rcLEBdRwkRgkT4JMIBC4b" target="_blank" rel="noopener noreferrer">
                 Listen on Spotify
@@ -135,7 +135,7 @@ function Songs() {
           <ListGroup.Item className="song-item">
             <h4>Long Way</h4>
             <p>Album: Home Coming</p>
-            <img src="images/long_way.png" className="img-fluid mb-3 w-50" />
+            <img src="images/Homecoming_updated.png" className="img-fluid mb-3 w-50" />
             <p>
               <a href="https://open.spotify.com/album/6JGUElqoSWFSigsVK4Qa2x" target="_blank" rel="noopener noreferrer">
                 Listen on Spotify
