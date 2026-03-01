@@ -99,7 +99,7 @@ function Landing() {
         <Col xs="12" className="p-0">
           <div className="video-wrapper">
             <video className="landing-hero-video" autoPlay loop muted>
-              <source src="/videos/MD-Movie-Background-2.mp4" type="video/mp4" />
+              <source src="/git-lfs-videos/MD-Movie-Background-2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -137,13 +137,13 @@ function Landing() {
       <Row className="mt-5">
         <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[0] = el)}>
           <video width="65%" controls style={{ marginTop: '15px' }}>
-            <source src="/videos/EverythingAboutYou-Short.mp4" type="video/mp4" />
+            <source src="/git-lfs-videos/EverythingAboutYou-Short.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </Col>
         <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[1] = el)}>
           <video width="65%" controls style={{ marginTop: '15px' }}>
-            <source src="/videos/Free-Promotion.mp4" type="video/mp4" />
+            <source src="/git-lfs-videos/Free-Promotion.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </Col>
