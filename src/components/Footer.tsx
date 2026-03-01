@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faSpotify, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faSpotify, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,11 +52,20 @@ function Footer() {
               href="https://www.tiktok.com/@maypodeluxe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark"
+              className="me-3 text-dark"
               aria-label="TikTok"
             >
               <FontAwesomeIcon icon={faTiktok} size="lg" />
-            </a>            
+            </a>
+            <a
+              href="https://www.youtube.com/@maypodeluxe5463"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark"
+              aria-label="YouTube"
+            >
+              <FontAwesomeIcon icon={faYoutube} size="lg" />
+            </a>                        
           </Col>
           <Col xs="auto">
             <img src="images/Scuff_Mutt_Dog.gif" alt="Another Footer Logo" className="footer-logo" />
