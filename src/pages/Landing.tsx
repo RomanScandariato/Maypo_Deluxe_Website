@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function Landing() {
   const handleButtonClick = () => {
-    window.open('https://open.spotify.com/track/2xvmV1bCMvk02xVpdIJIB9', '_blank');
+    window.open('https://open.spotify.com/track/6XgOOCA1qQuUZBsmNJ0qcD', '_blank');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -137,13 +137,13 @@ function Landing() {
       <Row className="mt-5">
         <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[0] = el)}>
           <video width="65%" controls style={{ marginTop: '15px' }}>
-            <source src="/videos/If-I-Only-Knew-RELEASE.mp4" type="video/mp4" />
+            <source src="/videos/EverythingAboutYou-Short.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </Col>
         <Col xs={12} md={6} className="d-flex justify-content-center fade-in" ref={(el: HTMLVideoElement | null) => (videoRefs.current[1] = el)}>
           <video width="65%" controls style={{ marginTop: '15px' }}>
-            <source src="/videos/Around-You-2024.mp4" type="video/mp4" />
+            <source src="/videos/Free-Promotion.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </Col>
