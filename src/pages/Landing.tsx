@@ -99,7 +99,7 @@ function Landing() {
         <Col xs="12" className="p-0">
           <div className="video-wrapper">
             <video className="landing-hero-video" autoPlay loop muted>
-              <source src="/git-lfs-videos/MD-Movie-Background-2.mp4" type="video/mp4" />
+              <source src="public/git-lfs-videos/MD-Movie-Background-2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
