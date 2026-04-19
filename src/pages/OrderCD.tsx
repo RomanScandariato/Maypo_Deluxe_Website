@@ -61,7 +61,7 @@ function OrderCD() {
             <img src='/images/Everything.png' width="160" ></img>
           </div>
           <h1 className="text-center newsletter-header">Order 'Everything'</h1>
-          <p className="text-center newsletter-extra">Currently accepting Venmo and shipping CD's to the US Only. CD's are $12.99 plus $2.50 for shipping. You can purchase the full set of mp3's $9.00 </p>
+          <p className="text-center newsletter-extra">Currently accepting Venmo and shipping CD's to the US Only. CD's are $12.99 plus $2.50 for shipping. You can purchase the full set of mp3's for $9.00 </p>
           <Form ref={formRef} onSubmit={submitOrder} className="newsletter-form">
             <Form.Group controlId="name">
               <Form.Control type="name" name="name" placeholder="Full Name" required />
