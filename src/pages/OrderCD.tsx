@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, FormControl } from 'react-bootstrap';
 
 function OrderCD() {
 
@@ -58,13 +58,13 @@ function OrderCD() {
       <Row className="mt-5 fade-in" ref={mailingListRef}>
         <Col xs="12">
           <div className="order-cd-image">
-            <img src='/images/Make-Believe.png' width="160" ></img>
+            <img src='/images/Everything.png' width="160" ></img>
           </div>
-          <h1 className="text-center newsletter-header">Order Make Believe</h1>
-          <p className="text-center newsletter-extra">Currently accepting Venmo and shipping to the US Only. CD's are $12.99, and $2.50 for shipping. We'll send a request for payment via Venmo. For singles (mp3's) use Amazon Music.</p>
+          <h1 className="text-center newsletter-header">Order 'Everything'</h1>
+          <p className="text-center newsletter-extra">Currently accepting Venmo and shipping CD's to the US Only. CD's are $12.99 plus $2.50 for shipping. You can purchase the full set of mp3's $9.00 </p>
           <Form ref={formRef} onSubmit={submitOrder} className="newsletter-form">
             <Form.Group controlId="name">
-              <Form.Control type="name" name="name" placeholder="Your Full Name" required />
+              <Form.Control type="name" name="name" placeholder="Full Name" required />
             </Form.Group>
             <Form.Group controlId="formAddress">
               <Form.Control type="address1" name="address1" placeholder="Address" required />
@@ -74,7 +74,7 @@ function OrderCD() {
             </Form.Group>
 
             <Form.Group className='order-city-size' controlId="formCity">
-              <Form.Control type="city" name="city" placeholder="Enter your City" required />
+              <Form.Control type="city" name="city" placeholder="City" required />
             </Form.Group>
 
             <Form.Group className="order-state-size" controlId="formState">
@@ -140,15 +140,17 @@ function OrderCD() {
             <Form.Group controlId="formVenmoID" >
               <Form.Control type="text" name="Your Venmo ID" placeholder="@my-venmo-id" required />
             </Form.Group>
+            <Form.Group controlId="email" >
+              <FormControl type="email" name="email" placeholder="email" required />
+            </Form.Group>
 
             <Col >
-              <Form.Group controlId="formCopies">
-                <Form.Select name="copies" required>
-                  <option value="">Number Of Copies</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
+              <Form.Group controlId="formType">
+                <Form.Select name="type" required>
+                  <option value="">CD or mp3's</option>
+                  <option value="CD">CD</option>
+                  <option value="mp3s">mp3's</option>
+
                 </Form.Select>
               </Form.Group>
             </Col>
