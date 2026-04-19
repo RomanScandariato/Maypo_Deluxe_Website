@@ -8,17 +8,39 @@ function Photos() {
         <Row>
           <Col xs={12} md={4} className="mb-4">
             <ListGroup.Item className="photo-item">
-                <img src="images/Popi_small.jpg" className="photo-image" />
+                <img src="images/markie.jpg" className="photo-image" />
                 <p>Mark Scan</p>
             </ListGroup.Item>
           </Col>
           <Col xs={12} md={4} className="mb-4">
 
             <ListGroup.Item className="photo-item">
-                <img src="images/MD-Promo-1.jpg" className="photo-image" />
-                <p>The Band</p>
+                <img src="images/mig-1.jpg" className="photo-image" />
+                <p>Miguel Gonzalez</p>
             </ListGroup.Item>
           </Col>
+          <Col xs={12} md={4} className="mb-4">
+
+            <ListGroup.Item className="photo-item">
+                <img src="images/Ricky_Sanders_n.jpg" className="photo-image" />
+                <p>Ricky Sanders</p>
+            </ListGroup.Item>
+          </Col>          
+          <Col xs={12} md={4} className="mb-4">
+
+            <ListGroup.Item className="photo-item">
+                <img src="images/ric_lord.jpg" className="photo-image" />
+                <p>Ric Fierabracci</p>
+            </ListGroup.Item>
+          </Col>
+          <Col xs={12} md={4} className="mb-4">
+
+            <ListGroup.Item className="photo-item">
+                <img src="images/Ricky_Sanders_1.jpg" className="photo-image" />
+                <p>Ricky Sanders</p>
+            </ListGroup.Item>
+          </Col>          
+
           <Col xs={12} md={4} className="mb-4">
             <ListGroup.Item className="photo-item">      
                 <img src="images/RobbTorress.jpg" className="photo-image" />
@@ -39,8 +61,8 @@ function Photos() {
           </Col>
           <Col xs={12} md={4} className="mb-4">
             <ListGroup.Item className="photo-item">      
-                <img src="images/SatelliteSix.jpg" className="photo-image" />
-                <p>The Band</p>
+                <img src="images/Popi_small.jpg" className="photo-image" />
+                <p>Mark Scan</p>
             </ListGroup.Item>
           </Col> 
           <Col xs={12} md={4} className="mb-4">

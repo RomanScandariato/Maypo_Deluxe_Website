@@ -7,6 +7,64 @@ function Songs() {
       <h1 className="text-center my-4">Featured Songs</h1>
       <ListGroup className="" style={{ paddingBottom: '20px' }}>
         <Row>
+
+        <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Everything About You</h4>
+            <p>Album: Everything</p>
+            <img src="images/Everything.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/track/6XgOOCA1qQuUZBsmNJ0qcD" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>A brand new year and a slight change of pace for the indie champion Maypo Deluxe. Always a great songwriter, Maypo Deluxe turns quite notably towards the upbeat colour and charm of indie rock and Brit pop with this latest release, combining great riffs and warm harmonies, with nostalgic long-form verses, and a hugely evocative, satisfying and heartfelt chorus.</p>
+                <p>Everything About You feels something like an old-school indie pop-rock jam from a simpler decade, only there’s a crisp, clean modern quality, and that unmistakable Maypo realism and voice in both lyric and tone at the forefront.</p>
+                <p>If you play this track in Spotify, you're likely to find yourself immersed in an indie realm of algorithmic joy. The song fits beautifully amidst the likes of The Libertines, James, St. Jimi Sebastian Cricket Club, and it also blends pop and rock quite seamlessly, with snappy rhymes and a fully-loaded rock and vocal arrangement letting the music naturally uplift.</p>
+                <p>The emotion and the energy pair brilliantly, and while this feels like a fresh direction for Maypo Deluxe, the beating heart of the songwriting remains, and the catchy resolves, the passion, the brightness, all rings as loudly as ever. The original twist is welcomed, and in short, the music and soulful honesty of Everything About You helps round off a cold and chaotic January pretty perfectly.</p>
+              </details>
+          </ListGroup.Item>
+        </Col>
+
+        <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>Northern Star</h4>
+            <p>Album: Everything</p>
+            <img src="images/Everything.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/track/5DxWNlAzorrsC5r0pDQNP9" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>No Article Yet</p>
+              </details>
+          </ListGroup.Item>
+        </Col>
+
+        <Col xs={12} md={4} className="mb-4">
+          <ListGroup.Item className="song-item">
+            <h4>On My Ride</h4>
+            <p>Album: Everything</p>
+            <img src="images/Everything.png" className="img-fluid mb-3 w-50" />
+            <p>
+              <a href="https://open.spotify.com/album/4l5FtguZAt0Wn0MLOxYZPu" target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </a>
+            </p>
+            <details className="flex-fill" style={{ marginBottom: '10px' }}>
+            <summary>Article</summary>
+                <p>No Article Yet</p>
+              </details>
+          </ListGroup.Item>
+        </Col>
+
+
+
+
         <Col xs={12} md={4} className="mb-4">
           <ListGroup.Item className="song-item">
             <h4>Keep On Moving</h4>
@@ -43,7 +101,7 @@ function Songs() {
                 <p>No Article Yet</p>
               </details>
           </ListGroup.Item>
-          </Col>
+        </Col>
 
         <Col xs={12} md={4} className="mb-4">
           <ListGroup.Item className="song-item">
